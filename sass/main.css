@@ -1,0 +1,101 @@
+/* -------------------------------- Config html - body */
+@import url("https://fonts.googleapis.com/css2?family=Smooch&display=swap");
+html {
+  scroll-behavior: smooth;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  box-sizing: border-box;
+  min-height: 320px;
+}
+
+/* -------------------------------- Polices */
+/* -------------------------------- Header */
+h1 {
+  font-family: "Smooch", serif;
+  font-size: 60px;
+  width: 100%;
+  text-align: center;
+  background-color: white;
+}
+h1 a {
+  text-decoration: none;
+  color: lightcoral;
+}
+
+.nav-header-list {
+  list-style-type: none;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  background: lightcoral;
+}
+.nav-header-list-item {
+  height: 50px;
+  width: 160px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 15px;
+}
+.nav-header-list-item a {
+  text-decoration: none;
+  color: white;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* -------------------------------- Main */
+/* ------------------------------------------- Presentation */
+.presentation-picture {
+  height: 530px;
+  width: 100%;
+}
+.presentation-picture img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+.presentation-body {
+  margin: auto;
+  background-color: lightcoral;
+  padding-top: 50px;
+}
+.presentation-body h2 {
+  text-align: center;
+  font-family: Arial, Helvetica, sans-serif;
+  text-transform: uppercase;
+  padding-bottom: 30px;
+  color: white;
+}
+.presentation-body .flavors {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+  padding-bottom: 50px;
+}
+.presentation-body .flavors-card {
+  width: 300px;
+  background-color: white;
+  height: 300px;
+  border-radius: 20px;
+  text-align: center;
+}
+.presentation-body .flavors-card h3 {
+  padding: 10px;
+}
+.presentation-body .flavors-card-pic {
+  height: 100%;
+}
+.presentation-body .flavors-card-pic img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+/*# sourceMappingURL=main.css.map */

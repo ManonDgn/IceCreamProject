@@ -1,0 +1,19 @@
+{
+  "name": "icecreamproject",
+  "version": "1.0.0",
+  "description": "IceCream Project",
+  "main": "index.js",
+  "scripts": {
+    "sass": "sass --watch ./sass/main.scss:./sass/main.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ManonDgn/IceCreamProject.git"
+  },
+  "author": "MD",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ManonDgn/IceCreamProject/issues"
+  },
+  "homepage": "https://github.com/ManonDgn/IceCreamProject#readme"
+}
