@@ -10,7 +10,8 @@ html {
 }
 
 body {
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   min-height: 320px;
 }
 
@@ -23,6 +24,7 @@ h1 {
   text-align: center;
   background-color: white;
 }
+
 h1 a {
   text-decoration: none;
   color: lightcoral;
@@ -30,19 +32,31 @@ h1 a {
 
 .nav-header-list {
   list-style-type: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   width: 100%;
   background: lightcoral;
 }
+
 .nav-header-list-item {
   height: 50px;
   width: 160px;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   margin: 0 15px;
 }
+
 .nav-header-list-item a {
   text-decoration: none;
   color: white;
@@ -52,19 +66,23 @@ h1 a {
 /* -------------------------------- Main */
 /* ------------------------------------------- Presentation */
 .presentation-picture {
-  height: 530px;
+  height: 400px;
   width: 100%;
 }
+
 .presentation-picture img {
   height: 100%;
   width: 100%;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
+
 .presentation-body {
   margin: auto;
   background-color: lightcoral;
-  padding-top: 50px;
+  padding: 50px 10px;
 }
+
 .presentation-body h2 {
   text-align: center;
   font-family: Arial, Helvetica, sans-serif;
@@ -72,30 +90,108 @@ h1 a {
   padding-bottom: 30px;
   color: white;
 }
-.presentation-body .flavors {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 40px;
-  padding-bottom: 50px;
-}
-.presentation-body .flavors-card {
-  width: 300px;
-  background-color: white;
-  height: 300px;
-  border-radius: 20px;
-  text-align: center;
-}
-.presentation-body .flavors-card h3 {
-  padding: 10px;
-}
-.presentation-body .flavors-card-pic {
-  height: 100%;
-}
-.presentation-body .flavors-card-pic img {
-  height: 100%;
-  width: 100%;
-  object-fit: cover;
+
+.presentation-body h3 {
+  font-family: Arial, Helvetica, sans-serif;
+  text-transform: uppercase;
+  color: white;
 }
 
+.presentation-body p {
+  padding: 10px 0;
+  color: white;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.presentation-body img {
+  height: 150px;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+  padding: 20px 0;
+}
+
+.bloc-btn {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: lightcoral;
+  padding: 20px 0 50px;
+  height: 40px;
+}
+
+.bloc-btn .btn {
+  background-color: antiquewhite;
+  color: lightcoral;
+  padding: 20px;
+  border-radius: 20px;
+  font-family: Arial, Helvetica, sans-serif;
+  text-transform: uppercase;
+  font-weight: bold;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+/* -------------------------------- Footer */
+footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background-color: antiquewhite;
+}
+
+footer nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 20px;
+  width: 85%;
+}
+
+footer nav ul {
+  list-style-type: none;
+}
+
+footer nav li {
+  padding: 5px 0;
+}
+
+footer nav li a {
+  text-decoration: none;
+  color: lightcoral;
+  font-weight: bold;
+}
+
+.social {
+  height: 20px;
+  width: 20px;
+  padding-right: 5px;
+  color: lightcoral;
+}
+
+hr.solid {
+  border: 1px solid lightcoral;
+  width: 100%;
+}
 /*# sourceMappingURL=main.css.map */

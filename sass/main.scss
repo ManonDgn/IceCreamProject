@@ -51,8 +51,9 @@ h1 {
 /* ------------------------------------------- Presentation */
 .presentation {
     &-picture {
-        height: 530px;
+        height: 400px;
         width: 100%;
+        
         img {
             height: 100%;
             width: 100%;
@@ -62,7 +63,8 @@ h1 {
     &-body {
         margin: auto;
         background-color: lightcoral;
-        padding-top: 50px;
+        padding: 50px 10px;
+
         h2 {
             text-align: center;
             font-family: Arial, Helvetica, sans-serif;
@@ -70,30 +72,79 @@ h1 {
             padding-bottom: 30px;
             color: white;
         }
-        .flavors {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            gap: 40px;
-            padding-bottom: 50px;
-            &-card {
-                width: 300px;
-                background-color: white;
-                height: 300px;
-                border-radius: 20px;
-                text-align: center;
-                h3 {
-                    padding: 10px;
-                }
-                &-pic {
-                    height: 100%;
-                    img {
-                        height: 100%;
-                        width: 100%;
-                        object-fit: cover;
-                    }
-                }
+        h3 {
+            font-family: Arial, Helvetica, sans-serif;
+            text-transform: uppercase;
+            color: white;
+        }
+        p {
+            padding: 10px 0;
+            color: white;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        img {
+            height: 150px;
+            width: 100%;
+            object-fit: cover;
+            object-position: center;
+            padding: 20px 0;
+
+        }
+    }
+}
+.bloc-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: lightcoral;
+    padding: 20px 0 50px;
+    height: 40px;
+    .btn {
+        background-color: antiquewhite;
+        color: lightcoral;
+        padding: 20px;
+        border-radius: 20px;
+        font-family: Arial, Helvetica, sans-serif;
+        text-transform: uppercase;
+        font-weight: bold;
+        cursor: pointer;
+        text-decoration: none;
+    }
+}
+/* -------------------------------- Footer */
+footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    
+    background-color: antiquewhite;
+    nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 20px;
+        width: 85%;
+        ul {
+            list-style-type: none;
+        }
+        li {
+            padding: 5px 0;
+            a {
+                text-decoration: none;
+                color: lightcoral;
+                font-weight: bold;
             }
         }
     }
+}
+
+.social {
+    height: 20px;
+    width: 20px;
+    padding-right: 5px;
+    color: lightcoral;
+}
+hr.solid {
+    border: 1px solid lightcoral;
+    width: 100%;
 }
