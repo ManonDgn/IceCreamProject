@@ -12,7 +12,7 @@ html {
 body {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  min-height: 320px;
+  min-width: 320px;
 }
 
 /* -------------------------------- Polices */
@@ -31,20 +31,28 @@ h1 a {
 }
 
 .nav-header-list {
+  background-color: lightcoral;
   list-style-type: none;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  width: 100%;
-  background: lightcoral;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
 .nav-header-list-item {
+  width: 25%;
+}
+
+.nav-header-list-item a {
+  display: inline-block;
+  text-decoration: none;
+  color: white;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 600;
   height: 50px;
-  width: 160px;
+  border-radius: 1px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -54,13 +62,14 @@ h1 a {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  margin: 0 15px;
+  border: solid 1px lightcoral;
 }
 
-.nav-header-list-item a {
-  text-decoration: none;
-  color: white;
-  font-family: Arial, Helvetica, sans-serif;
+.nav-header-list-item a:hover {
+  background-color: white;
+  color: lightcoral;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
 }
 
 /* -------------------------------- Main */
@@ -80,7 +89,17 @@ h1 a {
 .presentation-body {
   margin: auto;
   background-color: lightcoral;
-  padding: 50px 10px;
+  padding: 50px 30px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .presentation-body h2 {
@@ -92,9 +111,11 @@ h1 a {
 }
 
 .presentation-body h3 {
+  text-align: center;
   font-family: Arial, Helvetica, sans-serif;
   text-transform: uppercase;
   color: white;
+  padding-bottom: 10px;
 }
 
 .presentation-body p {
@@ -113,31 +134,28 @@ h1 a {
   padding: 20px 0;
 }
 
-.bloc-btn {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  background-color: lightcoral;
-  padding: 20px 0 50px;
-  height: 40px;
-}
-
-.bloc-btn .btn {
+.btn {
+  display: inline-block;
+  width: 30%;
+  text-align: center;
+  padding: 20px 0;
+  margin-top: 20px;
   background-color: antiquewhite;
   color: lightcoral;
-  padding: 20px;
   border-radius: 20px;
   font-family: Arial, Helvetica, sans-serif;
   text-transform: uppercase;
   font-weight: bold;
   cursor: pointer;
   text-decoration: none;
+  border: 2px solid antiquewhite;
+}
+
+.btn:hover {
+  background-color: lightcoral;
+  color: antiquewhite;
+  -webkit-box-shadow: 5px 5px 2px antiquewhite;
+          box-shadow: 5px 5px 2px antiquewhite;
 }
 
 /* -------------------------------- Footer */
@@ -162,36 +180,82 @@ footer nav {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
   padding: 20px;
-  width: 85%;
+  width: 100%;
 }
 
 footer nav ul {
+  color: lightcoral;
   list-style-type: none;
 }
 
 footer nav li {
-  padding: 5px 0;
+  padding: 10px 0;
+  width: 120px;
+}
+
+footer nav li::after {
+  content: "";
+  display: block;
+  padding-top: 3px;
+  border-bottom: 1px solid lightcoral;
+  width: 25px;
 }
 
 footer nav li a {
+  display: inline-block;
+  height: 22px;
   text-decoration: none;
   color: lightcoral;
   font-weight: bold;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
-.social {
+@media screen and (max-width: 769px) {
+  footer nav li a {
+    font-size: 15px;
+  }
+}
+
+.logo-nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  width: 150px;
+}
+
+.logo-nav-icone {
+  font-family: "Smooch", serif;
+  font-size: 40px;
+  color: lightcoral;
+  padding: 10px 0 20px;
+}
+
+@media screen and (max-width: 769px) {
+  .logo-nav-icone {
+    font-size: 25px;
+  }
+}
+
+.logo-nav .icecream-logo {
+  font-size: 30px;
+  color: lightcoral;
+}
+
+.r-social {
   height: 20px;
   width: 20px;
   padding-right: 5px;
   color: lightcoral;
-}
-
-hr.solid {
-  border: 1px solid lightcoral;
-  width: 100%;
 }
 /*# sourceMappingURL=main.css.map */

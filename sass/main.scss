@@ -8,7 +8,7 @@ html {
 }
 body {
     box-sizing: border-box;
-    min-height: 320px;
+    min-width: 320px;
 }
 /* -------------------------------- Polices */
 @import url('https://fonts.googleapis.com/css2?family=Smooch&display=swap');
@@ -27,22 +27,29 @@ h1 {
 }
 .nav-header {
     &-list {
+        background-color: lightcoral;
         list-style-type: none;
         display: flex;
-        justify-content: center;
-        width: 100%;
-        background:lightcoral;
+        justify-content: space-between;
         &-item {
-            height: 50px;
-            width: 160px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            margin: 0 15px;
+            width: 25%;
             a {
+                display: inline-block;
                 text-decoration: none;
                 color: white;
                 font-family: Arial, Helvetica, sans-serif;
+                font-weight: 600;
+                height: 50px;
+                border-radius: 1px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                border: solid 1px lightcoral;
+                &:hover {
+                    background-color: white;
+                    color: lightcoral;
+                    transition: all 0.5s;
+                }
             }
         }
     }
@@ -53,7 +60,6 @@ h1 {
     &-picture {
         height: 400px;
         width: 100%;
-        
         img {
             height: 100%;
             width: 100%;
@@ -63,8 +69,10 @@ h1 {
     &-body {
         margin: auto;
         background-color: lightcoral;
-        padding: 50px 10px;
-
+        padding: 50px 30px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
         h2 {
             text-align: center;
             font-family: Arial, Helvetica, sans-serif;
@@ -73,9 +81,11 @@ h1 {
             color: white;
         }
         h3 {
+            text-align: center;
             font-family: Arial, Helvetica, sans-serif;
             text-transform: uppercase;
             color: white;
+            padding-bottom: 10px;
         }
         p {
             padding: 10px 0;
@@ -92,23 +102,25 @@ h1 {
         }
     }
 }
-.bloc-btn {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: lightcoral;
-    padding: 20px 0 50px;
-    height: 40px;
-    .btn {
-        background-color: antiquewhite;
-        color: lightcoral;
-        padding: 20px;
-        border-radius: 20px;
-        font-family: Arial, Helvetica, sans-serif;
-        text-transform: uppercase;
-        font-weight: bold;
-        cursor: pointer;
-        text-decoration: none;
+.btn {
+    display: inline-block;
+    width: 30%;
+    text-align: center;
+    padding: 20px 0 ;
+    margin-top: 20px;
+    background-color: antiquewhite;
+    color: lightcoral;
+    border-radius: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    text-transform: uppercase;
+    font-weight: bold;
+    cursor: pointer;
+    text-decoration: none;
+    border: 2px solid antiquewhite;
+    &:hover {
+        background-color: lightcoral;
+        color: antiquewhite;
+        box-shadow: 5px 5px 2px antiquewhite;
     }
 }
 /* -------------------------------- Footer */
@@ -116,35 +128,64 @@ footer {
     display: flex;
     flex-direction: row;
     justify-content: center;
-    
     background-color: antiquewhite;
     nav {
         display: flex;
         justify-content: space-between;
-        align-items: center;
         padding: 20px;
-        width: 85%;
+        width: 100%;
         ul {
-            list-style-type: none;
+            color: lightcoral;
+            list-style-type:none;
         }
         li {
-            padding: 5px 0;
+            padding: 10px 0;
+            width: 120px;
+            &::after {
+                content: "";
+                display: block;
+                padding-top: 3px;
+                border-bottom: 1px solid lightcoral;
+                width: 25px;
+            }
             a {
+                display: inline-block;
+                height: 22px;
                 text-decoration: none;
                 color: lightcoral;
                 font-weight: bold;
+                font-family: Arial, Helvetica, sans-serif;
+                @media screen and (max-width: 769px) {
+                    font-size: 15px;
+                }
             }
         }
     }
 }
-
-.social {
+.logo-nav {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    width: 150px;
+    &-icone {
+        font-family: "Smooch", serif;
+        font-size: 40px;
+        color: lightcoral;
+        padding : 10px 0 20px;
+        @media screen and (max-width: 769px) {
+            font-size: 25px;
+        }
+    }
+    .icecream-logo {
+        font-size: 30px;
+        color: lightcoral;
+            
+    }
+}
+.r-social {
     height: 20px;
     width: 20px;
     padding-right: 5px;
     color: lightcoral;
-}
-hr.solid {
-    border: 1px solid lightcoral;
-    width: 100%;
 }
