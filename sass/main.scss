@@ -33,6 +33,10 @@ h1 {
         justify-content: space-between;
         &-item {
             width: 25%;
+            .on-page {
+                color: lightcoral;
+                background-color: white;
+            }
             a {
                 display: inline-block;
                 text-decoration: none;
@@ -45,7 +49,7 @@ h1 {
                 justify-content: center;
                 align-items: center;
                 border: solid 1px lightcoral;
-                &:hover {
+                &:hover, &:focus, &:active{
                     background-color: white;
                     color: lightcoral;
                     transition: all 0.5s;
@@ -117,10 +121,9 @@ h1 {
     cursor: pointer;
     text-decoration: none;
     border: 2px solid antiquewhite;
-    &:hover {
+    &:hover, &:focus, &:active {
         background-color: lightcoral;
         color: antiquewhite;
-        box-shadow: 5px 5px 2px antiquewhite;
     }
 }
 /* -------------------------------- Footer */
@@ -131,25 +134,21 @@ footer {
     background-color: antiquewhite;
     nav {
         display: flex;
-        justify-content: space-between;
-        padding: 20px;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 20px 0;
         width: 100%;
+        
         ul {
-            color: lightcoral;
             list-style-type:none;
+            display: flex;
         }
         li {
-            padding: 10px 0;
-            width: 120px;
-            &::after {
-                content: "";
-                display: block;
-                padding-top: 3px;
-                border-bottom: 1px solid lightcoral;
-                width: 25px;
-            }
+            padding: 10px;
             a {
                 display: inline-block;
+                padding: 5px;
                 height: 22px;
                 text-decoration: none;
                 color: lightcoral;
@@ -158,34 +157,28 @@ footer {
                 @media screen and (max-width: 769px) {
                     font-size: 15px;
                 }
+                &:hover, &:focus, &:active{
+                    &::after {
+                        content: "";
+                        display: block;
+                        width: 100%;
+                        border-bottom: 2px solid lightcoral;
+                
+                    }
+                }
             }
         }
     }
 }
-.logo-nav {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: flex-start;
-    width: 150px;
-    &-icone {
-        font-family: "Smooch", serif;
-        font-size: 40px;
-        color: lightcoral;
-        padding : 10px 0 20px;
-        @media screen and (max-width: 769px) {
-            font-size: 25px;
-        }
-    }
-    .icecream-logo {
-        font-size: 30px;
-        color: lightcoral;
-            
+.underline {
+    &::after {
+        content: "";
+        display: block;
+        width: 100%;
+        border-bottom: 2px solid lightcoral;
+
     }
 }
 .r-social {
-    height: 20px;
-    width: 20px;
-    padding-right: 5px;
-    color: lightcoral;
-}
+    padding-bottom: 5px;
+} 

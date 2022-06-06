@@ -45,6 +45,11 @@ h1 a {
   width: 25%;
 }
 
+.nav-header-list-item .on-page {
+  color: lightcoral;
+  background-color: white;
+}
+
 .nav-header-list-item a {
   display: inline-block;
   text-decoration: none;
@@ -65,7 +70,7 @@ h1 a {
   border: solid 1px lightcoral;
 }
 
-.nav-header-list-item a:hover {
+.nav-header-list-item a:hover, .nav-header-list-item a:focus, .nav-header-list-item a:active {
   background-color: white;
   color: lightcoral;
   -webkit-transition: all 0.5s;
@@ -151,11 +156,9 @@ h1 a {
   border: 2px solid antiquewhite;
 }
 
-.btn:hover {
+.btn:hover, .btn:focus, .btn:active {
   background-color: lightcoral;
   color: antiquewhite;
-  -webkit-box-shadow: 5px 5px 2px antiquewhite;
-          box-shadow: 5px 5px 2px antiquewhite;
 }
 
 /* -------------------------------- Footer */
@@ -177,33 +180,34 @@ footer nav {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  padding: 20px;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 20px 0;
   width: 100%;
 }
 
 footer nav ul {
-  color: lightcoral;
   list-style-type: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 
 footer nav li {
-  padding: 10px 0;
-  width: 120px;
-}
-
-footer nav li::after {
-  content: "";
-  display: block;
-  padding-top: 3px;
-  border-bottom: 1px solid lightcoral;
-  width: 25px;
+  padding: 10px;
 }
 
 footer nav li a {
   display: inline-block;
+  padding: 5px;
   height: 22px;
   text-decoration: none;
   color: lightcoral;
@@ -217,45 +221,21 @@ footer nav li a {
   }
 }
 
-.logo-nav {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
-  width: 150px;
+footer nav li a:hover::after, footer nav li a:focus::after, footer nav li a:active::after {
+  content: "";
+  display: block;
+  width: 100%;
+  border-bottom: 2px solid lightcoral;
 }
 
-.logo-nav-icone {
-  font-family: "Smooch", serif;
-  font-size: 40px;
-  color: lightcoral;
-  padding: 10px 0 20px;
-}
-
-@media screen and (max-width: 769px) {
-  .logo-nav-icone {
-    font-size: 25px;
-  }
-}
-
-.logo-nav .icecream-logo {
-  font-size: 30px;
-  color: lightcoral;
+.underline::after {
+  content: "";
+  display: block;
+  width: 100%;
+  border-bottom: 2px solid lightcoral;
 }
 
 .r-social {
-  height: 20px;
-  width: 20px;
-  padding-right: 5px;
-  color: lightcoral;
+  padding-bottom: 5px;
 }
 /*# sourceMappingURL=main.css.map */
